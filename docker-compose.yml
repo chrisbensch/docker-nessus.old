@@ -1,0 +1,15 @@
+---
+version: '3.9'
+
+services:
+  nessus:
+    image: tenableofficial/nessus
+    restart: always
+    container_name: bl-nessus-01
+    environment:
+      USERNAME: scanner
+      PASSWORD: password
+      ACTIVATION_CODE: 
+      AUTO_UPDATE: plugins
+    ports:
+      - 8834:8834
